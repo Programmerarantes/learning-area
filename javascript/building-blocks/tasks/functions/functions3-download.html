@@ -31,6 +31,17 @@
 
     // Add your code here
 
+    function random(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function chooseName(namesArray) {
+      const randomIndex = random(0, namesArray.length - 1);
+      return namesArray[randomIndex];
+    }
+
+    const chooseName = chooseName(names);
+    para.textContent = `The name randomly is: ${chooseName}`;
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
